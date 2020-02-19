@@ -3,6 +3,7 @@ import { ExternalComponent } from "webpack-external-import";
 import HelloWorld from "./components/goodbye-world";
 import "react-select";
 import { Form } from "tiny-mobx-form";
+import lodash from "lodash";
 
 class App extends Component {
   constructor(props) {
@@ -16,19 +17,6 @@ class App extends Component {
     console.log("Tree Shake Form", Form);
   }
 
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     console.log("Tree Shake Form", Form);
-  //   }, 3000);
-  //   __webpack_require__
-  //     .interleaved("website-2/TitleComponent")
-  //     .then(() => __webpack_require__("TitleComponent"));
-  //
-  //   __webpack_require__
-  //     .interleaved("website-3/TitleComponentWithCSSFile")
-  //     .then(() => __webpack_require__("TitleComponentWithCSSFile"));
-  // }
-
   render() {
     return (
       <div>
@@ -39,7 +27,7 @@ class App extends Component {
             "website-2/TitleComponent"
           )}
           export="Title"
-          title="Some Heading"
+          title="Some Heading112"
         />
 
         <ExternalComponent
@@ -47,7 +35,7 @@ class App extends Component {
             "website-3/TitleComponentWithCSSFile"
           )}
           export="Title"
-          title="Title Component With CSS File Import"
+          title="Title Component With CSS File Import333"
         />
       </div>
     );

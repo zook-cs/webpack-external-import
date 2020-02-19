@@ -32,15 +32,6 @@ module.exports = (siteId, options) => {
     {
       plugins: [
         new WriteFilePlugin(),
-        new URLImportPlugin({
-          manifestName,
-          fileName: "importManifest.js",
-          basePath: ``,
-          publicPath: `//localhost:300${siteId}/`,
-          writeToFileEmit: false,
-          filter: null,
-          debug: true,
-        }),
         new HtmlWebpackPlugin({
           template: templatePath,
           inject: true
